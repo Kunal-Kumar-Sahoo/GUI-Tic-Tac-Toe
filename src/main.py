@@ -9,7 +9,7 @@ symbol_O_color = '#0492CF'
 Green_color = '#7BC043'
 
 class Tic_Tac_Toe():
-    # Initialization functions
+    # Initialization Functions
     def __init__(self):
         self.window = Tk()
         self.window.title('Tic-Tac-Toe')
@@ -59,7 +59,6 @@ class Tic_Tac_Toe():
                                 grid_position[0] + symbol_size, grid_position[1] + symbol_size, width=symbol_thickness,
                                 outline=symbol_O_color)
 
-
     def draw_X(self, logical_position):
         logical_position = np.array(logical_position)
         grid_position = self.convert_logical_to_grid_position(logical_position)
@@ -101,6 +100,7 @@ class Tic_Tac_Toe():
 
         score_text = 'Click to play again\n'
         self.canvas.create_text(size_of_board / 2, 15 * size_of_board / 16, fill='gray', text=score_text)
+
 
     # Logical functions
     def convert_logical_to_grid_position(self, logical_position):
@@ -191,6 +191,7 @@ class Tic_Tac_Toe():
             self.play_again()
             self.reset_board = False
     
+# Driver code
 if __name__ == "__main__":
     game_instance = Tic_Tac_Toe()
     game_instance.mainloop()
